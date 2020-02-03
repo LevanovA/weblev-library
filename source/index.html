@@ -5,9 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <!-- Modal window -->
+  <div class="button-box">
+    <button class="button button--modal-open" type="button">Показать</button>
+  </div>
+  <section class="modal modal--closed">
+    <div class="modal__box">
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="modal__form" action="#">
+        <div class="modal__item modal__item--name">
+          <input type="text" placeholder="Имя" autofocus>
+        </div>
+        <div class="modal__item modal__item--tel">
+          <input type="tel" placeholder="Телефон">
+        </div>
+        <div class="modal__comment">
+          <textarea name="modal__comment" id="modal__comment" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+        </div>
+        <input class="button modal__button" type="submit" value="Отправить">
+        <div class="modal__agree">
+          <input type="checkbox" name="modal__agree" id="modal__agree" class="visually-hidden" checked>
+          <label for="modal__agree">Я согласен на обработку персональных данных</label>
+        </div>
+        <button class="modal__shut" type="button">Закрыть окно</button>
+      </form>
+    </div>
+  </section>
+  <!-- Overlay -->
+  <div class="overlay overlay--closed"></div>
+  <!-- Scripts -->
+  <script src="./js/modal.js"></script> <!-- Open and close modal window, overlay -->
 </body>
 </html>

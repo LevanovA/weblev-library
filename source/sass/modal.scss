@@ -1,0 +1,196 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
+  width: 490px;
+
+  color: $main-color;
+
+  padding-top: 30px;
+  padding-bottom: 35px;
+
+  background-color: $complementary-color;
+
+  transition: 0.5s;
+}
+
+.modal__box {
+  max-width: 411px;
+  margin: 0 auto;
+}
+
+.modal h2 {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 40px;
+}
+
+.modal p {
+  width: 390px;
+
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.modal__item input {
+  width: 100%;
+
+  margin-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+
+  color: $main-color;
+
+  background-color: #19baff;
+  border: none;
+
+  box-sizing: border-box;
+  outline: none;
+
+  &::placeholder {
+    color: $main-color;
+    opacity: 1;
+  }
+}
+
+.modal__comment {
+  width: 100%;
+}
+
+.modal__comment textarea {
+  width: 100%;
+  height: 104px;
+
+  color: $main-color;
+
+  margin-bottom: 30px;
+  padding-left: 25px;
+  padding-top: 13px;
+
+  background-color: #19baff;
+
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+
+  &::placeholder {
+    color: $main-color;
+    opacity: 1;
+  }
+}
+
+.modal__button {
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+.modal__agree {
+  width: 338px;
+  margin-left: 48px;
+}
+
+.modal__agree label {
+  position: relative;
+  display: block;
+
+  margin-left: -50px;
+  padding-left: 60px;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.modal__agree input + label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid $main-color;
+  box-sizing: border-box;
+}
+
+.modal__agree input:checked + label::after {
+    content: "";
+
+    position: absolute;
+    left: 5px;
+    top: 4px;
+
+    width: 7px;
+    height: 5px;
+    transform: rotate(-45deg);
+
+    border: 1px solid $main-color;
+    border-right: 1px solid $complementary-color;
+    border-top: 1px solid $complementary-color;
+
+    box-sizing: border-box;
+}
+
+.modal__shut {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 20px;
+  height: 20px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    transform: rotate(45deg);
+
+    width: 20px;
+    height: 1px;
+
+    background-color: $main-color;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: 2px;
+
+    width: 20px;
+    height: 1px;
+    transform: rotate(-45deg);
+
+    background-color: $main-color;
+  }
+}
+
+.modal--closed {
+  transform: translate(-50%,-300%);
+}
+
+.modal--opened {
+  transform: translate(-50%,-50%);
+}
